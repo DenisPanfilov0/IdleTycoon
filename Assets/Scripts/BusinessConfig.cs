@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -9,8 +7,14 @@ using UnityEngine;
 public class BusinessConfig : ScriptableObject
 {
     public int InitialLevel => _initialLevel;       //начальный уровень =
-    public int BaseLevelPrice => _baseLevelPrice;       //цена базового уровня =
+    public float BaseLevelPrice => _baseLevelPrice;       //цена базового уровня =
+    public float CurrentProfitBusiness => _currentProfitBusiness;
+    public float BaseProfitBusiness => _baseProfitBusiness;
+    public float LevelPrice => _levelPrice;
         
     [SerializeField] private int _initialLevel = 1;
-    [SerializeField] private int _baseLevelPrice = 100;
+    [SerializeField] private float _baseLevelPrice = 3;
+    [SerializeField] private float _levelPrice;
+    [SerializeField] private float _currentProfitBusiness = 0;
+    [SerializeField] private float _baseProfitBusiness = 3;
 }
