@@ -6,12 +6,12 @@ namespace config
     [Serializable]
     public class Balance
     {
-        public BalanceConfig BalanceValue;
+        public float BalanceValue = 100f;
 
-        public Balance(BalanceConfig config)
-        {
-            //todo Настроить баланас
-            //BalanceValue = config.Balance;
-        }
+        // public Balance(BalanceConfig config)
+        // {
+        //     BalanceValue = config.Balance;
+        // }
+        
     }
 }
