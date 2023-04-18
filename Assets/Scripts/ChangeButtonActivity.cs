@@ -10,10 +10,10 @@ namespace DefaultNamespace
     {
         [SerializeField] private GameObject ButtonOnUpgrade;
         [SerializeField] private GameObject ButtonOffUpgrade;
-        [SerializeField] private Button ButtonFirstOnImprovement;
-        [SerializeField] private Button ButtonFirstOffImprovement;
-        [SerializeField] private Button ButtonSecondOnImprovement;
-        [SerializeField] private Button ButtonSecondOffImprovement;
+        [SerializeField] private GameObject ButtonFirstOnImprovement;
+        [SerializeField] private GameObject ButtonFirstOffImprovement;
+        [SerializeField] private GameObject ButtonSecondOnImprovement;
+        [SerializeField] private GameObject ButtonSecondOffImprovement;
 
       
         public void ChangeButtonMaxLevel()
@@ -21,5 +21,18 @@ namespace DefaultNamespace
             ButtonOnUpgrade.SetActive(false);
             ButtonOffUpgrade.SetActive(true);
         }
+
+        public void ChangeButtonFirstEmprovement()
+        {
+            ButtonFirstOnImprovement.SetActive(false);
+            ButtonFirstOffImprovement.SetActive(true);
+        }
+        
+        public void ChangeButtonSecondEmprovement()
+        {
+            ButtonSecondOnImprovement.SetActive(false);
+            ButtonSecondOffImprovement.SetActive(true);
+        }
+        
     }
 }

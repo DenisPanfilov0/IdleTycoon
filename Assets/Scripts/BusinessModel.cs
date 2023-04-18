@@ -7,7 +7,7 @@ namespace DefaultNamespace
     /// <summary>
     /// Текущая прокачка
     /// </summary>
-    public class BusinessModel : MonoBehaviour
+    public class BusinessModel 
     {
         public float CurrentLevel { get; private set; }
         public float BaseLevelUpPrice { get; private set; }
@@ -34,20 +34,27 @@ namespace DefaultNamespace
             //_balance = new Balance();
         }
 
-        public void UpgradeLevel()
+        public void UpgradeLevelButton()
         {
             if (BalanceManager.Instance.BalanceValue >= LevelUpPrice && CurrentLevel < 5)
             {
-                Debug.Log(BalanceManager.Instance.BalanceValue);
+                // Debug.Log(BalanceManager.Instance.BalanceValue);
                 BalanceManager.Instance.BalanceValue -= LevelUpPrice;
                 CurrentLevel++;
                 CurrentProfit = CurrentLevel * BaseProfit * (1 + 0 + 0);
                 LevelUpPrice = (CurrentLevel + 1) * BaseLevelUpPrice;
-                Debug.Log(BalanceManager.Instance.BalanceValue);
+                // Debug.Log(BalanceManager.Instance.BalanceValue);
             }
-            
-            
+        }
 
+        public void FirstImprovementButton()
+        {
+            
+        }
+        
+        public void SecondImprovementButton()
+        {
+            
         }
     }
 }

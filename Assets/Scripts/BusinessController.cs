@@ -46,7 +46,6 @@ public class BusinessController : MonoBehaviour
 
     public void OnUpgradeButtonClick()
     {
-        _model.UpgradeLevel();
-        
+        _model.UpgradeLevelButton();
     }
 }
