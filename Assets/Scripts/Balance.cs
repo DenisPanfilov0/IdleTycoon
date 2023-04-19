@@ -1,17 +1,7 @@
-﻿using System;
-using UnityEngine;
-
-namespace config
+﻿namespace DefaultNamespace
 {
-    [Serializable]
     public class Balance
     {
-        public float BalanceValue = 100f;
-
-        // public Balance(BalanceConfig config)
-        // {
-        //     BalanceValue = config.Balance;
-        // }
-        
+        private float balance;
     }
 }

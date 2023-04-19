@@ -9,8 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cc223516bbb4f1893b4518508abb979, type: 3}
-  m_Name: Balance
+  m_Script: {fileID: 11500000, guid: 45e3c6ad69f75ba42a53c61c9739e583, type: 3}
+  m_Name: Business_4
   m_EditorClassIdentifier: 
-  _balance:
-    BalanceValue: 33.02
+  _initialLevel: 0
+  _baseLevelPrice: 1000
+  _baseProfitBusiness: 1000
+  _firstImprovement: 15000
+  _secondImprovement: 100
+  _delay: 17
+  _businessName: Gold Mine
