@@ -1,12 +1,9 @@
-﻿using TMPro;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 namespace DefaultNamespace
 {
     public class IncomeProgressBar : MonoBehaviour
     {
-
         private BusinessController _businessController;
         public IncomeProgressBar(BusinessController businessController)
         {
@@ -15,13 +12,8 @@ namespace DefaultNamespace
         
         private void Start()
         {
+            
             _businessController = FindObjectOfType<BusinessController>();
-
-        }
-        
-        private void Update()
-        {
-
         }
     }
 }

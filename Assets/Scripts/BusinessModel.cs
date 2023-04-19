@@ -1,6 +1,4 @@
-﻿using System;
-//using config;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace DefaultNamespace
 {
@@ -21,14 +19,12 @@ namespace DefaultNamespace
 
         public BusinessModel (BusinessConfig config)
         {
-            CurrentLevel = config.InitialLevel;         //присваиваем значение начального уровня => значение текущего уровеня
+            CurrentLevel = config.InitialLevel;
             BaseLevelUpPrice = config.BaseLevelPrice;
             Delay = config.Delay;
             FirstImprovement = config.FirstImprovement;
             SecondImprovement = config.SecondImprovement;
-            LevelUpPrice = (CurrentLevel + 1) * BaseLevelUpPrice;         
-
-
+            LevelUpPrice = (CurrentLevel + 1) * BaseLevelUpPrice;
             //todo уточнить правильность приравнивания к BaseProfitBusiness, вместо CurrentProfitBusiness
             CurrentProfit = config.BaseProfitBusiness;
             BaseProfit = config.BaseProfitBusiness;
@@ -37,32 +33,31 @@ namespace DefaultNamespace
 
         public void UpgradeLevelButton()
         {
-            if (BalanceManager.Instance.BalanceValue >= LevelUpPrice && CurrentLevel < 5)
+            if (Balance.Instance.BalanceValue >= LevelUpPrice && CurrentLevel < 5)
             {
-
-                BalanceManager.Instance.BalanceValue -= LevelUpPrice;
+                Balance.Instance.BalanceValue -= LevelUpPrice;
                 CurrentLevel++;
-                CurrentProfit = CurrentLevel * BaseProfit * (1 + 0 + 0);
+                CurrentProfit += CurrentLevel * BaseProfit * (1 + 0 + 0);
                 LevelUpPrice = (CurrentLevel + 1) * BaseLevelUpPrice;
-
             }
         }
 
         public void FirstImprovementButton()
         {
-            if (BalanceManager.Instance.BalanceValue >= BaseLevelUpPrice * 10)
+            if (Balance.Instance.BalanceValue >= BaseLevelUpPrice * 10)
             {
                 CurrentProfit += FirstImprovement;
-                BalanceManager.Instance.BalanceValue -= BaseLevelUpPrice * 10;
+                Balance.Instance.BalanceValue -= BaseLevelUpPrice * 10;
             }
         }
         
         public void SecondImprovementButton()
         {
-            if (BalanceManager.Instance.BalanceValue >= BaseLevelUpPrice * 20)
+            if (Balance.Instance.BalanceValue >= BaseLevelUpPrice * 20)
             {
                 CurrentProfit *= (SecondImprovement / 100) + 1;
-                BalanceManager.Instance.BalanceValue -= BaseLevelUpPrice * 20;
+                Balance.Instance.BalanceValue -= BaseLevelUpPrice * 20;
+                Debug.Log(CurrentProfit);
             }
         }
     }

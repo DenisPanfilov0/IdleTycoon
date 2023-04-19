@@ -1,9 +1,6 @@
-﻿using System;
-//using config;
-using DefaultNamespace;
+﻿using DefaultNamespace;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 /// <summary>
@@ -22,32 +19,22 @@ public class BusinessController : MonoBehaviour
     [SerializeField] private ChangeButtonActivity _changeButtonActivity;
     [SerializeField] private BusinessConfig BusinessConfig;
     [SerializeField] private TextMeshProUGUI _businessName;
+    [SerializeField] private Slider Slider;
     private BusinessModel _model;
-
-    
-    
-    
-    public float currentProgress { get; private set; }
+    public float currentProgress;
     private float progressTarget = 1.0f;
     private float progressSpeed;
-    [SerializeField] private Slider Slider;
-
-    
-
 
     private void Start()
     {
         currentProgress = 0f;
         _model = new BusinessModel(BusinessConfig);
         Slider.value = currentProgress;
-        
         _firstImprovementPriceText.text = (_model.BaseLevelUpPrice * 10).ToString();
         _firstImprovementText.text = "+" + _model.FirstImprovement.ToString();
         _secondImprovementPriceText.text = (_model.BaseLevelUpPrice * 20).ToString();
         _secondImprovementText.text = "+" + _model.SecondImprovement.ToString() + "%";
         _businessName.text = _model.BusinessName;
-
-
     }
 
     private void Update()
@@ -57,7 +44,6 @@ public class BusinessController : MonoBehaviour
 
         if (currentProgress < progressTarget && _model.CurrentLevel >= 1)
         {
-
             progressSpeed = 1.0f / _model.Delay;
             currentProgress += progressSpeed * Time.deltaTime;
             currentProgress = Mathf.Clamp01(currentProgress);
@@ -65,7 +51,7 @@ public class BusinessController : MonoBehaviour
         else if (_model.CurrentLevel >= 1)
         {
             currentProgress = 0f;
-            BalanceManager.Instance.BalanceValue += _model.CurrentProfit;
+            Balance.Instance.BalanceValue += _model.CurrentProfit;
         }
         
         _currentLevelBusinessText.text = _model.CurrentLevel.ToString();

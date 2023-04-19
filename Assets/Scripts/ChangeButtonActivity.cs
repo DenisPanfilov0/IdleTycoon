@@ -1,8 +1,4 @@
-﻿using System;
-using TMPro;
-using Unity.VisualScripting;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 namespace DefaultNamespace
 {
@@ -15,7 +11,6 @@ namespace DefaultNamespace
         [SerializeField] private GameObject ButtonSecondOnImprovement;
         [SerializeField] private GameObject ButtonSecondOffImprovement;
 
-      
         public void ChangeButtonMaxLevel()
         {
             ButtonOnUpgrade.SetActive(false);
