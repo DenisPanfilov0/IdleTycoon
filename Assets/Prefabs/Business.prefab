@@ -857,6 +857,7 @@ GameObject:
   - component: {fileID: 4920101405506098773}
   - component: {fileID: 4920101405506098772}
   - component: {fileID: 4920101405506098769}
+  - component: {fileID: 8862370771453349472}
   - component: {fileID: 4920101405506098770}
   - component: {fileID: 4920101405506098771}
   m_Layer: 5
@@ -943,7 +944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4fb94cd2174920b30ad77c6515bf35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _PercentProgressText: {fileID: 4920101405157217822}
+  _percentProgressText: {fileID: 0}
   _currentLevelBusinessText: {fileID: 4920101405916286785}
   _currentBusinessProfitText: {fileID: 4920101406966926580}
   _levelUpPriceText: {fileID: 4920101406550512747}
@@ -952,9 +953,25 @@ MonoBehaviour:
   _secondImprovementPriceText: {fileID: 5153866986641305184}
   _secondImprovementText: {fileID: 5153866986465356052}
   _changeButtonActivity: {fileID: 4920101405506098770}
-  BusinessConfig: {fileID: 11400000, guid: 2f25b563947d43441be26cc775d2f02d, type: 2}
+  _businessConfig: {fileID: 0}
   _businessName: {fileID: 6282312786620155574}
-  Slider: {fileID: 4920101405179348920}
+  _slider: {fileID: 0}
+  currentProgress: 0
+--- !u!114 &8862370771453349472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4920101405506098799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0d7d88d688d4307845974cc745ac028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _percentProgressText: {fileID: 4920101405157217822}
+  _slider: {fileID: 4920101405179348920}
+  _currentProgress: 0
 --- !u!114 &4920101405506098770
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,33 +1,30 @@
 ﻿using UnityEngine;
 
-namespace DefaultNamespace
+public class ChangeButtonActivity : MonoBehaviour
 {
-    public class ChangeButtonActivity : MonoBehaviour
+    [SerializeField] private GameObject _buttonOnUpgrade;
+    [SerializeField] private GameObject _buttonOffUpgrade;
+    [SerializeField] private GameObject _buttonFirstOnImprovement;
+    [SerializeField] private GameObject _buttonFirstOffImprovement;
+    [SerializeField] private GameObject _buttonSecondOnImprovement;
+    [SerializeField] private GameObject _buttonSecondOffImprovement;
+
+    public void ChangeButtonMaxLevel()
     {
-        [SerializeField] private GameObject ButtonOnUpgrade;
-        [SerializeField] private GameObject ButtonOffUpgrade;
-        [SerializeField] private GameObject ButtonFirstOnImprovement;
-        [SerializeField] private GameObject ButtonFirstOffImprovement;
-        [SerializeField] private GameObject ButtonSecondOnImprovement;
-        [SerializeField] private GameObject ButtonSecondOffImprovement;
-
-        public void ChangeButtonMaxLevel()
-        {
-            ButtonOnUpgrade.SetActive(false);
-            ButtonOffUpgrade.SetActive(true);
-        }
-
-        public void ChangeButtonFirstEmprovement()
-        {
-            ButtonFirstOnImprovement.SetActive(false);
-            ButtonFirstOffImprovement.SetActive(true);
-        }
-        
-        public void ChangeButtonSecondEmprovement()
-        {
-            ButtonSecondOnImprovement.SetActive(false);
-            ButtonSecondOffImprovement.SetActive(true);
-        }
-        
+        _buttonOnUpgrade.SetActive(false);
+        _buttonOffUpgrade.SetActive(true);
     }
+
+    public void ChangeButtonFirstEmprovement()
+    {
+        _buttonFirstOnImprovement.SetActive(false);
+        _buttonFirstOffImprovement.SetActive(true);
+    }
+
+    public void ChangeButtonSecondEmprovement()
+    {
+        _buttonSecondOnImprovement.SetActive(false);
+        _buttonSecondOffImprovement.SetActive(true);
+    }
+
 }

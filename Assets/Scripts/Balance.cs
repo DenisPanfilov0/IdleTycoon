@@ -1,41 +1,43 @@
 ﻿using TMPro;
 using UnityEngine;
-
+/// <summary>
+/// класс реализующий баланс игрока в синглтоне
+/// </summary>
 public class Balance : MonoBehaviour
 {
-    private static Balance instance;
-    [SerializeField] private float balanceValue;
+    [SerializeField] public float BalanceValue;
     [SerializeField] private TextMeshProUGUI _currentBalanceText;
+    private static Balance _instance;
 
     public static Balance Instance
     {
         get
         {
-            if (instance == null)
+            if (_instance == null)
             {
-                instance = FindObjectOfType<Balance>();
-                if (instance == null)
+                _instance = FindObjectOfType<Balance>();
+                if (_instance == null)
                 {
                     GameObject obj = new GameObject();
                     obj.name = typeof(Balance).Name;
-                    instance = obj.AddComponent<Balance>();
+                    _instance = obj.AddComponent<Balance>();
                 }
             }
-            return instance;
+            return _instance;
         }
     }
-
-    public float BalanceValue
-    {
-        get { return balanceValue; }
-        set { balanceValue = value; }
-    }
+    //todo Поискать позже более лаконичное решение для приватной установки
+    // public float BalanceValue
+    // {
+    //     get { return _balanceValue; }
+    //     set { _balanceValue = value; }
+    // }
 
     private void Awake()
     {
-        if (instance == null)
+        if (_instance == null)
         {
-            instance = this;
+            _instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -46,6 +48,6 @@ public class Balance : MonoBehaviour
 
     private void Update()
     {
-        _currentBalanceText.text = balanceValue.ToString();
+        _currentBalanceText.text = BalanceValue.ToString();
     }
 }
