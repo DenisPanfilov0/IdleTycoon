@@ -857,9 +857,7 @@ GameObject:
   - component: {fileID: 4920101405506098773}
   - component: {fileID: 4920101405506098772}
   - component: {fileID: 4920101405506098769}
-  - component: {fileID: 8862370771453349472}
   - component: {fileID: 4920101405506098770}
-  - component: {fileID: 4920101405506098771}
   m_Layer: 5
   m_Name: Business
   m_TagString: Untagged
@@ -944,34 +942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4fb94cd2174920b30ad77c6515bf35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _percentProgressText: {fileID: 0}
-  _currentLevelBusinessText: {fileID: 4920101405916286785}
-  _currentBusinessProfitText: {fileID: 4920101406966926580}
-  _levelUpPriceText: {fileID: 4920101406550512747}
-  _firstImprovementPriceText: {fileID: 5153866985862102226}
-  _firstImprovementText: {fileID: 5153866985776075206}
-  _secondImprovementPriceText: {fileID: 5153866986641305184}
-  _secondImprovementText: {fileID: 5153866986465356052}
-  _changeButtonActivity: {fileID: 4920101405506098770}
   _businessConfig: {fileID: 0}
-  _businessName: {fileID: 6282312786620155574}
-  _slider: {fileID: 0}
-  currentProgress: 0
---- !u!114 &8862370771453349472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4920101405506098799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0d7d88d688d4307845974cc745ac028, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _percentProgressText: {fileID: 4920101405157217822}
-  _slider: {fileID: 4920101405179348920}
-  _currentProgress: 0
 --- !u!114 &4920101405506098770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -984,24 +955,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b81693da8bdc455ea7a566162b96e638, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonOnUpgrade: {fileID: 4920101405352848461}
-  ButtonOffUpgrade: {fileID: 4920101405499092994}
-  ButtonFirstOnImprovement: {fileID: 5153866985963607997}
-  ButtonFirstOffImprovement: {fileID: 5153866985729510418}
-  ButtonSecondOnImprovement: {fileID: 5153866985488839437}
-  ButtonSecondOffImprovement: {fileID: 5153866986076357290}
---- !u!114 &4920101405506098771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4920101405506098799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd66ffbdca4a4913b56e0a2603613740, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _buttonOnUpgrade: {fileID: 0}
+  _buttonOffUpgrade: {fileID: 0}
+  _buttonFirstOnImprovement: {fileID: 0}
+  _buttonFirstOffImprovement: {fileID: 0}
+  _buttonSecondOnImprovement: {fileID: 0}
+  _buttonSecondOffImprovement: {fileID: 0}
 --- !u!1 &4920101405719710881
 GameObject:
   m_ObjectHideFlags: 0

@@ -379,7 +379,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Business
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4920101405506098771, guid: ff085bcb96984f14d89691890046155a, type: 3}
+    - {fileID: 8862370771453349472, guid: ff085bcb96984f14d89691890046155a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ff085bcb96984f14d89691890046155a, type: 3}
 --- !u!224 &4920654940586232814 stripped
 RectTransform:

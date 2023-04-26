@@ -276,9 +276,9 @@ RectTransform:
   m_Father: {fileID: 86070446}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.096, y: 0.7053502}
-  m_AnchorMax: {x: 0.096, y: 0.7053502}
-  m_AnchoredPosition: {x: 3.664917, y: 0.75}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 104.66492, y: -53.6131}
   m_SizeDelta: {x: 209.32983, y: 107.2262}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &109513403
@@ -532,8 +532,9 @@ PrefabInstance:
       value: Business (1)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 8862370771453349472, guid: ff085bcb96984f14d89691890046155a, type: 3}
+    - {fileID: 0}
     - {fileID: 4920101405506098771, guid: ff085bcb96984f14d89691890046155a, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: ff085bcb96984f14d89691890046155a, type: 3}
 --- !u!1 &485308784 stripped
 GameObject:
@@ -871,7 +872,7 @@ PrefabInstance:
       value: Business (3)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 8862370771453349472, guid: ff085bcb96984f14d89691890046155a, type: 3}
+    - {fileID: 0}
     - {fileID: 4920101405506098771, guid: ff085bcb96984f14d89691890046155a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ff085bcb96984f14d89691890046155a, type: 3}
 --- !u!1 &800674496 stripped
@@ -1926,7 +1927,7 @@ PrefabInstance:
       value: Business (2)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 8862370771453349472, guid: ff085bcb96984f14d89691890046155a, type: 3}
+    - {fileID: 0}
     - {fileID: 4920101405506098771, guid: ff085bcb96984f14d89691890046155a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ff085bcb96984f14d89691890046155a, type: 3}
 --- !u!114 &1778029459 stripped
@@ -2284,9 +2285,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Business (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8862370771453349472, guid: ff085bcb96984f14d89691890046155a, type: 3}
-    - {fileID: 4920101405506098771, guid: ff085bcb96984f14d89691890046155a, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff085bcb96984f14d89691890046155a, type: 3}
 --- !u!1 &2139067953 stripped
 GameObject:
@@ -2575,7 +2574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5154419284110358675, guid: 113d9548b39a90c4cb6b5062d30b5e06, type: 3}
       propertyPath: m_Name
-      value: Scroll View
+      value: BusinessScroll
       objectReference: {fileID: 0}
     - target: {fileID: 5154419285369395910, guid: 113d9548b39a90c4cb6b5062d30b5e06, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2583,9 +2582,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5154419283894731594, guid: 113d9548b39a90c4cb6b5062d30b5e06, type: 3}
-    - {fileID: 0}
-    - {fileID: 8859544683197928414, guid: 113d9548b39a90c4cb6b5062d30b5e06, type: 3}
-    - {fileID: 4920654940586232813, guid: 113d9548b39a90c4cb6b5062d30b5e06, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 113d9548b39a90c4cb6b5062d30b5e06, type: 3}
 --- !u!1 &5154419284116555199 stripped
 GameObject:
